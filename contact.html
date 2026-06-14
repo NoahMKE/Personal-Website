@@ -1,0 +1,108 @@
+<!doctype html>
+    <html lang="en-us">
+        <head>
+            <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Contact Me</title>
+                        <link rel="stylesheet" href="styles.css">
+                            <link rel="icon" type="image/jpg" href="1080x1080.jpg">
+                                <script src="script.js" defer></script>
+                        <!-- EmailJS integration for contact form -->
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+						</script>
+						<script type="text/javascript">
+   						(function(){
+      					emailjs.init({
+       					 publicKey: "-UNCXoxcyARKXGqnC",
+      					});
+   						})();
+						</script>
+                        <!-- End of EmailJS integration -->
+                            </head>
+                        <body id="body2">
+                    <header>
+                <nav>	
+            <ul>
+        <a href="index.html">Home</a> 
+    <a href="contact.html">Contact Me</a>
+    <a href="projects.html">Projects</a>
+</ul>	
+    </nav>
+        </header>
+                
+                   <main id="mainform">
+                    <section>
+                    <h1 id="formh1">Contact Form</h1>
+                    <p id="formp1">This is the best way to contact me.</p>
+                    </section>
+                   
+                    <form onsubmit="sendEmail(event)">
+                        <div>
+                            <label for="fname" class="labeltext">First name</label>
+                            <input type="text" id="fname" name="fname" placeholder="Noah" class="infobox" required>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="lname" class="labeltext">Last name</label>
+                            <input type="text" id="lname" name="lname" placeholder="Campbell" class="infobox" required>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="email" class="labeltext">Email</label>
+                            <input type="email" id="email" name="email" placeholder="pimp_alex_91@hotmail.com" class="infobox" required>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="phone" class="labeltext">Phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(678)-999-8212" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="infobox" required>
+                        </div>
+
+                        <br>
+
+                        
+                        <div>
+                            <label for="title" class="labeltext">title:</label>
+
+                            <label for="Mr." class="labeltext">Mr.</label>
+                            <input type="radio" id="Mr." name="title" value="Mr." class="infobox">
+                        
+                            <label for="Ms." class="labeltext">Ms.</label>
+                            <input type="radio" id="Ms." name="title" value="Ms." class="infobox">
+
+                            <label for="PhD." class="labeltext">PhD.</label>
+                            <input type="radio" id="PhD." name="title" value="PhD." class="infobox">
+                        </div>
+
+                        <br>
+
+                        <div>
+                        <label for="file" class="labeltext">File:</label>
+                        <input type="file" id="file" name="file" accept="image/jpeg, image/png">
+                        </div>
+
+                        <br>
+
+
+                        <div>
+                            <label for="Text" class="labeltext">Message</label>
+                            <textarea id="comment" name="comment" rows="5" cols="25"></textarea>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <input type="reset" class="formbtn">
+                            <input type="submit" class="formbtn" value="Send Email">
+                        </div>
+                    </form>
+</main>
+ <footer>
+    <p class="copyright">&copy; 2026 Noah Campbell. All Rights Reserved.</p>
+  </footer>
+</body>
